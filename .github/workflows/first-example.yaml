@@ -6,11 +6,10 @@ jobs:
     first_job:
         runs-on: ubuntu-latest
         steps:
-            - name: welcome message
-              run: echo "Hello, world!"
             - name: Checkout Repo
               uses: actions/checkout@v4.2.2
             - name: List files
-              run : ls
-            - name: Read File
-              run: cat README.md
+              run : |
+                echo "Hello World"
+                ls -ltra
+                cat README.md
