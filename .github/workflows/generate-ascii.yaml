@@ -8,16 +8,7 @@ jobs:
         steps:
             - name: Checkout Repo
               uses: actions/checkout@v4.2.2
-
-            - name: install cowsay
-              run: sudo apt install cowsay -y
-
-            - name: Generate ASCII Artwork
-              run: cowsay -f dragon "I am a dragon" >> dragon.txt
-            
-            - name: test file exist
-              run: grep -i "dragon" dragon.txt
             - name: List files
-              run : |
-                ls -ltra
-                cat README.md
+              run : ls -ltra
+            - name: Excuting shell script
+              run: ./ascii-sctipt.sh
