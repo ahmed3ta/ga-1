@@ -12,5 +12,5 @@ jobs:
               run : ls -ltra
             - name: Excuting shell script
               run: |
-                chmod +x ascii-sctipt.sh
-                ./ascii-sctipt.sh
+                chmod +x ascii-script.sh
+                ./ascii-script.sh
