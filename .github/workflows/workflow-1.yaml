@@ -1,12 +1,15 @@
 name: workflow 1
 on: push
 
-
-jobs:
-    ahmed:
-        concurrency:
+concurrency:
           group: production-deployment
           cancel-in-progress: true
+jobs:
+    ahmed:
+        timeout-minutes: 5
+        # concurrency:
+        #   group: production-deployment
+        #   cancel-in-progress: true
         needs: ahmed2
         runs-on: ubuntu-latest
         steps:
@@ -23,11 +26,11 @@ jobs:
             - name: cat dragon.txt
               run: |
                 cat dragon/dragon.txt
-                sleep 600
+                sleep 6000
     ahmed2:
-        concurrency:
-          group: production-deployment
-          cancel-in-progress: true
+        # concurrency:
+        #   group: production-deployment
+        #   cancel-in-progress: true
         runs-on: ubuntu-latest
         steps:
             - name: checkout
