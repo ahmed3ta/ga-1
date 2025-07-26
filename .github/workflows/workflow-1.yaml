@@ -16,9 +16,9 @@ jobs:
               uses: actions/download-artifact@v4
               with:
                 name: artifact
-                path: dragon.txt
+                path: dragon.
             - name: cat dragon.txt
-              run: cat dragon.txt
+              run: cat dragon/dragon.txt
     ahmed2:
         runs-on: ubuntu-latest
         steps:
