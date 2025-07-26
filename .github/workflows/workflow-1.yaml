@@ -8,4 +8,6 @@ jobs:
         steps:
             - name: Welcome 
               run: echo "Hello world"
+            - name: cow say
+              run: cowsay -f dragon "Run for cover, I am a DRAGON....RAWR" >> dragon.txt
 
