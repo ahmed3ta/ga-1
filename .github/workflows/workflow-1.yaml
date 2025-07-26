@@ -12,11 +12,8 @@ jobs:
             - name: Welcome 
               run: |
                 echo "Hello world"
-                # sudo apt update -y
-                # sudo apt install cowsay -y
-                # cowsay -f dragon "Run for cover, I am a DRAGON....RAWR" >> dragon.txt
-                # cat dragon.txt
-                sleep 15
+            - name: cat dragon.txt
+              run: cat dragon.txt
     ahmed2:
         runs-on: ubuntu-latest
         steps:
