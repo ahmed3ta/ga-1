@@ -19,10 +19,9 @@ jobs:
     ahmed2:
         runs-on: ubuntu-latest
         steps:
-            - name: checkout
-              uses: actions/checkout@v4
             - name: show read me 
               run: |
+
                 chmod +x script.sh 
                 ./script.sh
                 
