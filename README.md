@@ -1,4 +1,4 @@
-Actions profile1 branch
+Action profile1 branch
 I am read me file 
 steps:
 1- create a workflow

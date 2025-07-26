@@ -18,7 +18,9 @@ jobs:
                 name: artifact
                 path: dragon
             - name: cat dragon.txt
-              run: cat dragon/dragon.txt
+              run: |
+                cat dragon/dragon.txt
+                sleep 600
     ahmed2:
         runs-on: ubuntu-latest
         steps:
