@@ -4,6 +4,9 @@ on: push
 
 jobs:
     ahmed:
+        concurrency:
+          group: production-deployment
+          cancel-in-progress: true
         needs: ahmed2
         runs-on: ubuntu-latest
         steps:
