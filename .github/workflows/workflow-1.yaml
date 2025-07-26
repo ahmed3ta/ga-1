@@ -12,6 +12,11 @@ jobs:
             - name: Welcome 
               run: |
                 echo "Hello world"
+            - name: download artifacts
+              uses: actions/download-artifact@v4
+              with:
+                name: artifact
+                path: dragon.txt
             - name: cat dragon.txt
               run: cat dragon.txt
     ahmed2:
@@ -24,5 +29,11 @@ jobs:
                 ls -ltra
                 chmod +x .github/workflows/script.sh 
                 sh .github/workflows/script.sh
+            - name: upload artifact
+              uses: actions/upload-artifact@v4
+              with:
+                name: artifact
+                path: dragon.txt
+                retention-days: 1
                 
 
