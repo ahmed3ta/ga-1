@@ -4,6 +4,7 @@ on: push
 
 jobs:
     ahmed:
+        needs: ahmed2
         runs-on: ubuntu-latest
         steps:
             - name: checkout
